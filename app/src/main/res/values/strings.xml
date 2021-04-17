@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Momento1</string>
+    <string name="ayudaHoras"></string>
+    <string name="calcular"></string>
+
+    <string name="descripcion1">Nos encontramos ubicados en el departamento del Quindío, centro occidente del país, inmersos en el mar de verdes del Eje Cafetero colombiano.  </string>
+    <string name="descripcion2">El Jardín Botánico del Quindío es un centro de investigación científica y de educación ambiental ubicado en la ciudad de Calarcá. Es el primer legalmente constituido en Colombia. Fue fundado en 1978 por Alberto Gómez Mejía, la Organización OIKOS, la Universidad del Quindío y el Club de Jardinería de Armenia.​ </string>
+    <string name="descripcion3">El Museo del Oro Quimbaya es un museo arqueológico en Armenia, Colombia de arte precolombino. El museo tiene una gran colección de objetos de orfebrería, cerámica y piedra de las civilizaciones precolombinas de las tribus Quimbaya. La entrada al museo es gratuita al público.​ </string>
+    <string name="descripcion4">El Parque de la Vida es el parque urbano más grande e importante de la ciudad de Armenia, Colombia.​ Se encuentra ubicado en el norte de la ciudad. Está surcado por las avenidas Bolívar y Centenario, occidente y oriente, respectivamente.  </string>
+
+
+</resources>
