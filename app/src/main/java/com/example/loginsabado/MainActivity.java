@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         nombre=findViewById(R.id.nombreMain);
         descripcion=findViewById(R.id.descripcionMain);
         foto=findViewById(R.id.fotoMain);
+        cajaResultado=findViewById(R.id.resultado);
 
         empleado=(Trabajador) getIntent().getSerializableExtra("trabajador");
 
@@ -43,18 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
                 int horasTrabajadas= Integer.parseInt(cajaHorasTrabajadas.getText().toString());
 
-                if(horasTrabajadas<=40){
-
-                    int salario=horasTrabajadas*20000;
-                    cajaResultado.setText("Su salario es de: $"+salario);
-
-                }else{
-
-                    final int SALARIOBASE=40*20000;
-                    int salarioExtra=(horasTrabajadas-40)*25000;
-                    int salario=SALARIOBASE+salarioExtra;
-                    cajaResultado.setText("Su salario es de: $"+salario);
-                }
+                int total = horasTrabajadas * 640000;
+                cajaResultado.setText("El pago es de: $"+total);
             }
         });
     }
