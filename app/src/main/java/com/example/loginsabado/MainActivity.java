@@ -29,24 +29,10 @@ public class MainActivity extends AppCompatActivity {
         nombre=findViewById(R.id.nombreMain);
         descripcion=findViewById(R.id.descripcionMain);
         foto=findViewById(R.id.fotoMain);
-        cajaResultado=findViewById(R.id.resultado);
 
-        empleado=(Trabajador) getIntent().getSerializableExtra("trabajador");
-
+        empleado = (Trabajador)getIntent().getSerializableExtra("trabajador");
+        foto.setImageResource(empleado.getFoto());
         nombre.setText(empleado.getNombre());
         descripcion.setText(empleado.getDescripcion());
-        foto.setImageResource(empleado.getFoto());
-
-
-        botonCalcularSalario.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                int horasTrabajadas= Integer.parseInt(cajaHorasTrabajadas.getText().toString());
-
-                int total = horasTrabajadas * 640000;
-                cajaResultado.setText("El pago es de: $"+total);
-            }
-        });
     }
 }
