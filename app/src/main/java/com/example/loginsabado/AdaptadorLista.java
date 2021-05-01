@@ -42,19 +42,23 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
     public class viewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre,descripcion;
-        ImageView foto;
+        ImageView foto, foto2,fondo;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             nombre=itemView.findViewById(R.id.nombre);
             foto=itemView.findViewById(R.id.foto);
             descripcion=itemView.findViewById(R.id.descripcion);
+            //fondo=itemView.findViewById(R.id.fondo);
+            //foto2=itemView.findViewById(R.id.foto2);
         }
 
         public void actualizarDatosDeItem(Trabajador datos) {
             nombre.setText(datos.getNombre());
-            foto.setImageResource(datos.getFoto());
             descripcion.setText(datos.getDescripcion());
+            foto.setImageResource(datos.getFoto());
+            //fondo.setImageResource(datos.getFondo());
+            //foto2.setImageResource(datos.getFoto());
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,3 +72,4 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
         }
     }
 }
+

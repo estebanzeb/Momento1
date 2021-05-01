@@ -15,11 +15,9 @@ public class MainActivity extends AppCompatActivity {
     EditText cajaHorasTrabajadas;
     Button botonCalcularSalario;
     TextView cajaResultado,nombre,descripcion;
-    ImageView foto;
+    ImageView foto, foto2,fondo;
 
     Trabajador empleado;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +27,15 @@ public class MainActivity extends AppCompatActivity {
         nombre=findViewById(R.id.nombreMain);
         descripcion=findViewById(R.id.descripcionMain);
         foto=findViewById(R.id.fotoMain);
+        //foto2=findViewById(R.id.foto2);
+        //fondo=findViewById(R.id.fondo);
 
         empleado = (Trabajador)getIntent().getSerializableExtra("trabajador");
-        foto.setImageResource(empleado.getFoto());
+
         nombre.setText(empleado.getNombre());
         descripcion.setText(empleado.getDescripcion());
+        foto.setImageResource(empleado.getFoto());
+        //foto2.setImageResource(empleado.getFoto2());
+        //fondo.setImageResource(empleado.getFondo());
     }
 }

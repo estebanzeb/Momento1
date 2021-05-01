@@ -33,8 +33,5 @@ public class Splash extends AppCompatActivity {
         Timer tiempo=new Timer();
         tiempo.schedule(inicio,3000);
 
-
-
-
     }
 }

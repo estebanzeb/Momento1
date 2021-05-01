@@ -5,37 +5,54 @@ import java.io.Serializable;
 
 public class Trabajador implements Serializable {
 
-    String nombres, descripciones;
-    int fotos;
+    String nombre, descripcion;
+    int foto,foto2,fondo;
 
-
-    public Trabajador(String nombre, String descripcion, int foto) {
-        this.nombres = nombre;
-        this.descripciones = descripcion;
-        this.fotos = foto;
+    public Trabajador(String nombre, String descripcion, int foto, int foto2, int fondo) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.foto = foto;
+        this.foto2 = foto2;
+        this.fondo = fondo;
     }
 
     public String getNombre() {
-        return nombres;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombres = nombre;
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
-        return descripciones;
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripciones = descripcion;
+        this.descripcion = descripcion;
     }
 
     public int getFoto() {
-        return fotos;
+        return foto;
     }
 
-    public void setFoto(int foto) {
-        this.fotos = foto;
+    public void setFotos(int foto) {
+        this.foto = foto;
+    }
+
+    public int getFoto2() {
+        return foto2;
+    }
+
+    public void setFoto2(int foto2) {
+        this.foto2 = foto2;
+    }
+
+    public int getFondo() {
+        return fondo;
+    }
+
+    public void setFondo(int fondo) {
+        this.fondo = fondo;
     }
 }
