@@ -50,7 +50,7 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
             foto=itemView.findViewById(R.id.foto);
             descripcion=itemView.findViewById(R.id.descripcion);
             //fondo=itemView.findViewById(R.id.fondo);
-            //foto2=itemView.findViewById(R.id.foto2);
+           // foto2=itemView.findViewById(R.id.foto2);
         }
 
         public void actualizarDatosDeItem(Trabajador datos) {
