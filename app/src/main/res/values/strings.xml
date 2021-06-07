@@ -8,5 +8,10 @@
     <string name="descripcion3">El Museo del Oro Quimbaya es un museo arqueológico en Armenia, Colombia de arte precolombino. El museo tiene una gran colección de objetos de orfebrería, cerámica y piedra de las civilizaciones precolombinas de las tribus Quimbaya. La entrada al museo es gratuita al público.​ </string>
     <string name="descripcion4">El Parque de la Vida es el parque urbano más grande e importante de la ciudad de Armenia, Colombia.​ Se encuentra ubicado en el norte de la ciudad. Está surcado por las avenidas Bolívar y Centenario, occidente y oriente, respectivamente.  </string>
 
+    <string name="opcion1">Acerca de</string>
+    <string name="opcion2">Ingles</string>
+    <string name="opcion3">Español</string>
+    <string name="nombre">ESTEBAN QUINTERO YEPES </string>
+    <string name="descripcion">Soy Esteban Quintero Yepes, desarrollador de software profesional</string>
 
 </resources>

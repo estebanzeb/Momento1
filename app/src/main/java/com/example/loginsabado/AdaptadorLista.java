@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHolder> {
@@ -41,32 +43,38 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
 
     public class viewHolder extends RecyclerView.ViewHolder {
 
-        TextView nombre,descripcion;
+        TextView nombre;
         ImageView foto, foto2,fondo;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             nombre=itemView.findViewById(R.id.nombre);
             foto=itemView.findViewById(R.id.foto);
-            descripcion=itemView.findViewById(R.id.descripcion);
-            //fondo=itemView.findViewById(R.id.fondo);
-            //foto2=itemView.findViewById(R.id.foto2);
+            fondo=itemView.findViewById(R.id.fondo);
+            foto2=itemView.findViewById(R.id.foto2);
         }
 
-        public void actualizarDatosDeItem(Trabajador datos) {
-            nombre.setText(datos.getNombre());
-            descripcion.setText(datos.getDescripcion());
-            foto.setImageResource(datos.getFoto());
-            //fondo.setImageResource(datos.getFondo());
-            //foto2.setImageResource(datos.getFoto());
+        public void actualizarDatosDeItem(Trabajador turismo) {
+
+            nombre.setText(turismo.getNombre());
+            Picasso.with(itemView.getContext())
+                    .load(turismo.getFoto())
+                    .into(foto);
+            Picasso.with(itemView.getContext())
+                    .load(turismo.getFoto())
+                    .into(foto2);
+            Picasso.with(itemView.getContext())
+                    .load(turismo.getFoto())
+                    .into(fondo);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                     Intent intent=new Intent(itemView.getContext(),MainActivity.class);
-                    intent.putExtra("trabajador",datos);
+                    intent.putExtra("trabajador",turismo);
                     itemView.getContext().startActivity(intent);
+
                 }
             });
         }

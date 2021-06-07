@@ -5,12 +5,10 @@ import java.io.Serializable;
 
 public class Trabajador implements Serializable {
 
-    String nombre, descripcion;
-    int foto,foto2,fondo;
+    String nombre, foto,foto2,fondo;
 
-    public Trabajador(String nombre, String descripcion, int foto, int foto2, int fondo) {
+    public Trabajador(String nombre, String foto, String foto2, String fondo) {
         this.nombre = nombre;
-        this.descripcion = descripcion;
         this.foto = foto;
         this.foto2 = foto2;
         this.fondo = fondo;
@@ -24,35 +22,27 @@ public class Trabajador implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public int getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFotos(int foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 
-    public int getFoto2() {
+    public String getFoto2() {
         return foto2;
     }
 
-    public void setFoto2(int foto2) {
+    public void setFoto2(String foto2) {
         this.foto2 = foto2;
     }
 
-    public int getFondo() {
+    public String getFondo() {
         return fondo;
     }
 
-    public void setFondo(int fondo) {
+    public void setFondo(String fondo) {
         this.fondo = fondo;
     }
 }

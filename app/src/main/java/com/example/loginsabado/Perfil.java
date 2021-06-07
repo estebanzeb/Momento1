@@ -7,41 +7,16 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
-    //ATRIBUTOS
-    TextView nombre;
-    ImageView foto, foto2,fondo;
+public class Perfil extends AppCompatActivity {
 
-
-    Trabajador turismo;
-
-    /*@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        nombre=findViewById(R.id.nombre);
-        foto=findViewById(R.id.foto);
-        foto2=findViewById(R.id.foto2);
-        fondo=findViewById(R.id.fondo);
-
-        turismo = (Trabajador)getIntent().getSerializableExtra("trabajador");
-
-        nombre.setText(turismo.getNombre());
-        foto.setText(turismo.getNombre());
-        foto2.setText(Integer.parseInt(turismo.getFoto2()));
-        fondo.setText(Integer.parseInt(turismo.getFondo()));
-    }*/
-
-
+        setContentView(R.layout.activity_perfil);
+    }
     //Metodo para configurar el idioma de mi telefono
     public void  cambiarIdioma(String lenguaje){
 
@@ -53,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         getBaseContext().getResources().updateConfiguration(configurationTelefono,getBaseContext().getResources().getDisplayMetrics());
     }
+
 
     //Metido que infla(PINTA) el menu
     public boolean onCreateOptionsMenu(Menu menu){
@@ -69,20 +45,20 @@ public class MainActivity extends AppCompatActivity {
         switch (id){
 
             case (R.id.opcion1):
-                Intent intent = new Intent(MainActivity.this,Perfil.class);
+                Intent intent = new Intent(Perfil.this,Home.class);
                 startActivity(intent);
                 break;
 
             case (R.id.opcion2):
                 this.cambiarIdioma("en");
-                Intent intent2 = new Intent(MainActivity.this,MainActivity.class);
+                Intent intent2 = new Intent(Perfil.this,Perfil.class);
                 startActivity(intent2);
 
                 break;
 
             case (R.id.opcion3):
                 this.cambiarIdioma("es");
-                Intent intent3 = new Intent(MainActivity.this,MainActivity.class);
+                Intent intent3 = new Intent(Perfil.this,Perfil.class);
                 startActivity(intent3);
                 break;
         }

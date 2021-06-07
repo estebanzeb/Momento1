@@ -15,28 +15,8 @@
         android:background="@drawable/fondo1"
         />
 
-    <ImageView
-        android:id="@+id/foto2"
-        android:layout_width="207dp"
-        android:layout_height="140dp"
-        android:src="@drawable/foto1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcionMain"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/fotoMain"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:src="@drawable/avatar1"
-        android:padding="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nombreMain"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
     <TextView
-        android:id="@+id/nombreMain"
+        android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -50,15 +30,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:src="@drawable/avatar1"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
     <TextView
         android:id="@+id/descripcionMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/sandybrown"
+        android:textColor="@color/blanchedalmond"
         android:textStyle="bold"
-        android:textSize="28sp"
+        android:textSize="25sp"
         android:text="@string/descripcion1"
-        app:layout_constraintTop_toBottomOf="@id/fotoMain"
+        app:layout_constraintTop_toBottomOf="@id/foto"
         app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/foto2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/foto1"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descripcionMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

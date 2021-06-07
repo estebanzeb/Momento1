@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Momento1</string>
+    <string name="ayudaHoras"></string>
+    <string name="calcular"></string>
+
+    <string name="descripcion1">We are located in the department of Quindío, central western part of the country, immersed in the sea of greens of the Colombian Coffee Region. </string>
+    <string name="descripcion2">The Quindío Botanical Garden is a scientific research and environmental education center located in the city of Calarcá. It is the first legally constituted in Colombia. It was founded in 1978 by Alberto Gómez Mejía, the OIKOS Organization, the University of Quindío and the Gardening Club of Armenia.</string>
+    <string name="descripcion3"> The Quimbaya Gold Museum is an archaeological museum in Armenia, Colombia of pre-Columbian art. The museum has a large collection of jewelery, ceramics and stone objects from the pre-Columbian civilizations of the Quimbaya tribes. Entrance to the museum is free to the public.</string>
+    <string name="descripcion4">Parque de la Vida is the largest and most important urban park in the city of Armenia, Colombia, located in the north of the city. It is crossed by the avenues Bolívar and Centenario, west and east, respectively.</string>
+
+    <string name="opcion1">About</string>
+    <string name="opcion2">English</string>
+    <string name="opcion3">Spanish</string>
+    <string name="nombre">ESTEBAN QUINTERO YEPES </string>
+    <string name="descripcion">I am Esteban Quintero Yepes, professional software developer</string>
+
+
+
+
+
+</resources>
