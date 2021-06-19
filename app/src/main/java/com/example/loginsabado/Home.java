@@ -21,51 +21,76 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class Home extends AppCompatActivity {
+ /*public class Home extends AppCompatActivity {
 
-    ArrayList<Trabajador> listaDeDatos = new ArrayList<>();
+   ArrayList<Trabajador> listaDeDatos = new ArrayList<>();
     RecyclerView listado;
-    FirebaseFirestore baseDatos = FirebaseFirestore.getInstance();
+    //FirebaseFirestore baseDatos = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        listado = findViewById(R.id.listado);
+        listado=findViewById(R.id.listado);
         listado.setHasFixedSize(true);
-        listado.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        listado.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        //crearListado();
+        crearListado();
+
+        AdaptadorLista adaptador= new AdaptadorLista(listaDeDatos);
+        listado.setAdapter(adaptador);
 
     }
 
-    /*private void crearListado() {
-
-        baseDatos.collection("turismo")
+    private void crearListado() {
+        listaDeDatos.add(new Trabajador(
+                "Parque del cafe",
+                R.drawable.avatar1,
+                R.drawable.foto1,
+                R.drawable.fondo1));
+        listaDeDatos.add(new Trabajador(
+                "Parque del cafe",
+                R.drawable.avatar1,
+                R.drawable.foto1,
+                R.drawable.fondo1));
+        listaDeDatos.add(new Trabajador(
+                "Parque del cafe",
+                R.drawable.avatar1,
+                R.drawable.foto1,
+                R.drawable.fondo1));
+        listaDeDatos.add(new Trabajador(
+                "Parque del cafe",
+                R.drawable.avatar1,
+                R.drawable.foto1,
+                R.drawable.fondo1));
+    }
+       /* baseDatos.collection("turismo")
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
-                                String nombre =document.get("nombre").toString();
-                                String foto = document.get("foto").toString();
-                                String foto2 = document.get("foto2").toString();
-                                String fondo = document.get("fondo").toString();
+                            if(task.isSuccessful()){
 
-                                listaDeDatos.add(new Trabajador(nombre,foto,foto2,fondo));
+                               for(QueryDocumentSnapshot document : task.getResult()){
+
+                                   String nombre = document.get("nombre").toString();
+                                   String foto = document.get("foto").toString();
+                                   String foto2 = document.get("foto2").toString();
+                                   String fondo=document.get("fondo").toString();
+                                   listaDeDatos.add(new Trabajador(nombre,foto,foto2,fondo));
+                               }*/
+
+
+                                /*AdaptadorLista adaptador = new AdaptadorLista(listaDeDatos);
+                                listado.setAdapter(adaptador);
+                            }else{
+                                Toast.makeText(getApplicationContext(),"No se encotraron las imagenes",Toast.LENGTH_LONG).show();
                             }
-                            AdaptadorLista adaptador = new AdaptadorLista(listaDeDatos);
-                            listado.setAdapter(adaptador);
                         }
-                        else {
-                            Toast.makeText(getApplicationContext(), "Error consultando datos", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-    }*/
+                    })
+
 
     //Metodo para configurar el idioma de mi telefono
     public void  cambiarIdioma(String lenguaje){
@@ -114,4 +139,4 @@ public class Home extends AppCompatActivity {
         }
         return  super.onOptionsItemSelected(opcion);
     }
-}
+};*/

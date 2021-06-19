@@ -45,7 +45,7 @@ public class Perfil extends AppCompatActivity {
         switch (id){
 
             case (R.id.opcion1):
-                Intent intent = new Intent(Perfil.this,Home.class);
+                Intent intent = new Intent(Perfil.this,MainActivity.class);
                 startActivity(intent);
                 break;
 

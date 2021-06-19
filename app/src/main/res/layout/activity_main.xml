@@ -25,43 +25,52 @@
         android:textColor="@color/red"
         android:textSize="28sp"
         android:textStyle="bold"
+        app:layout_constraintVertical_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
     <ImageView
         android:id="@+id/foto"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:src="@drawable/avatar1"
         android:adjustViewBounds="true"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintTop_toBottomOf="@id/nombre"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
     <TextView
-        android:id="@+id/descripcionMain"
+        android:id="@+id/descripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/blanchedalmond"
         android:textStyle="bold"
         android:textSize="25sp"
         android:text="@string/descripcion1"
+        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintTop_toBottomOf="@id/foto"
-        app:layout_constraintStart_toStartOf="parent"/>
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <ImageView
         android:id="@+id/foto2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:src="@drawable/foto1"
         android:adjustViewBounds="true"
+        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintTop_toBottomOf="@id/descripcion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcionMain"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 

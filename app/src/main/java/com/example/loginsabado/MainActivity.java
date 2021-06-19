@@ -21,25 +21,26 @@ public class MainActivity extends AppCompatActivity {
     ImageView foto, foto2,fondo;
 
 
-    Trabajador turismo;
+    //Trabajador Trabajador;
 
-    /*@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        nombre=findViewById(R.id.nombre);
-        foto=findViewById(R.id.foto);
-        foto2=findViewById(R.id.foto2);
-        fondo=findViewById(R.id.fondo);
+        //nombre=findViewById(R.id.nombre);
+        //foto=findViewById(R.id.foto);
+        //foto2=findViewById(R.id.foto2);
+        //fondo=findViewById(R.id.fondo);
 
-        turismo = (Trabajador)getIntent().getSerializableExtra("trabajador");
+        //Trabajador = (Trabajador)getIntent().getSerializableExtra("Trabajador");
 
-        nombre.setText(turismo.getNombre());
-        foto.setText(turismo.getNombre());
-        foto2.setText(Integer.parseInt(turismo.getFoto2()));
-        fondo.setText(Integer.parseInt(turismo.getFondo()));
-    }*/
+        //nombre.setText(Trabajador.getNombre());
+        //foto.setImageResource(Trabajador.getFoto());
+        //fondo.setImageResource(Trabajador.getFondo());
+        //foto2.setImageResource(Trabajador.getFoto2());
+
+    }
 
 
     //Metodo para configurar el idioma de mi telefono

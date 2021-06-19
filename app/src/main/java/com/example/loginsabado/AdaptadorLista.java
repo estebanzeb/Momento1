@@ -14,9 +14,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHolder> {
+ /*public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHolder> {
 
-    ArrayList<Trabajador> listaDeDatos;
+   ArrayList<Trabajador> listaDeDatos;
 
     public AdaptadorLista(ArrayList<Trabajador> listaDeDatos) {
         this.listaDeDatos = listaDeDatos;
@@ -27,7 +27,7 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
     @Override
     public AdaptadorLista.viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View vistaItemLista= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_de_lista,parent,false);
+                .inflate(R.layout.item_de_lista,null,false);
         return new viewHolder(vistaItemLista);
     }
 
@@ -44,16 +44,32 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
     public class viewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre;
-        ImageView foto, foto2,fondo;
+        ImageView foto, foto2, fondo;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            nombre=itemView.findViewById(R.id.nombre);
-            foto=itemView.findViewById(R.id.foto);
-            fondo=itemView.findViewById(R.id.fondo);
-            foto2=itemView.findViewById(R.id.foto2);
+            nombre = itemView.findViewById(R.id.nombre);
+            foto = itemView.findViewById(R.id.foto);
+            fondo = itemView.findViewById(R.id.fondo);
+            foto2 = itemView.findViewById(R.id.foto2);
         }
+        public void actualizarDatosDeItem(Trabajador Trabajador) {
+            nombre.setText(Trabajador.getNombre());
+            foto.setImageResource(Trabajador.getFoto());
+            fondo.setImageResource(Trabajador.getFondo());
+            foto2.setImageResource(Trabajador.getFoto2());
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent=new Intent(itemView.getContext(),MainActivity.class);
+                    intent.putExtra("Trabajador",Trabajador);
+                    itemView.getContext().startActivity(intent);
+
+                }
+            });
+        }
         public void actualizarDatosDeItem(Trabajador turismo) {
 
             nombre.setText(turismo.getNombre());
@@ -67,17 +83,8 @@ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHold
                     .load(turismo.getFoto())
                     .into(fondo);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
 
-                    Intent intent=new Intent(itemView.getContext(),MainActivity.class);
-                    intent.putExtra("trabajador",turismo);
-                    itemView.getContext().startActivity(intent);
-
-                }
-            });
         }
     }
-}
+}*/
 
