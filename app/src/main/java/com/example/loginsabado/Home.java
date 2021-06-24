@@ -21,11 +21,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.Locale;
 
- /*public class Home extends AppCompatActivity {
+ public class Home extends AppCompatActivity {
 
    ArrayList<Trabajador> listaDeDatos = new ArrayList<>();
     RecyclerView listado;
-    //FirebaseFirestore baseDatos = FirebaseFirestore.getInstance();
+    FirebaseFirestore baseDatos = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,59 +38,36 @@ import java.util.Locale;
 
         crearListado();
 
-        AdaptadorLista adaptador= new AdaptadorLista(listaDeDatos);
-        listado.setAdapter(adaptador);
-
     }
 
     private void crearListado() {
-        listaDeDatos.add(new Trabajador(
-                "Parque del cafe",
-                R.drawable.avatar1,
-                R.drawable.foto1,
-                R.drawable.fondo1));
-        listaDeDatos.add(new Trabajador(
-                "Parque del cafe",
-                R.drawable.avatar1,
-                R.drawable.foto1,
-                R.drawable.fondo1));
-        listaDeDatos.add(new Trabajador(
-                "Parque del cafe",
-                R.drawable.avatar1,
-                R.drawable.foto1,
-                R.drawable.fondo1));
-        listaDeDatos.add(new Trabajador(
-                "Parque del cafe",
-                R.drawable.avatar1,
-                R.drawable.foto1,
-                R.drawable.fondo1));
-    }
-       /* baseDatos.collection("turismo")
+
+        baseDatos.collection("turismo")
                 .get()
-                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
-                            if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
 
-                               for(QueryDocumentSnapshot document : task.getResult()){
+                            for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                   String nombre = document.get("nombre").toString();
-                                   String foto = document.get("foto").toString();
-                                   String foto2 = document.get("foto2").toString();
-                                   String fondo=document.get("fondo").toString();
-                                   listaDeDatos.add(new Trabajador(nombre,foto,foto2,fondo));
-                               }*/
-
-
-                                /*AdaptadorLista adaptador = new AdaptadorLista(listaDeDatos);
-                                listado.setAdapter(adaptador);
-                            }else{
-                                Toast.makeText(getApplicationContext(),"No se encotraron las imagenes",Toast.LENGTH_LONG).show();
+                                String nombre = document.get("nombre").toString();
+                                String foto = document.get("foto").toString();
+                                String foto2 = document.get("foto2").toString();
+                                String fondo = document.get("fondo").toString();
+                                listaDeDatos.add(new Trabajador(nombre, foto, foto2, fondo));
                             }
-                        }
-                    })
 
+                            AdaptadorLista adaptador = new AdaptadorLista(listaDeDatos);
+                            listado.setAdapter(adaptador);
+
+                        } else {
+                            Toast.makeText(getApplicationContext(), "No se encotraron las imagenes", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+    }
 
     //Metodo para configurar el idioma de mi telefono
     public void  cambiarIdioma(String lenguaje){
@@ -139,4 +116,4 @@ import java.util.Locale;
         }
         return  super.onOptionsItemSelected(opcion);
     }
-};*/
+}

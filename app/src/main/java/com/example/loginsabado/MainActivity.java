@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,24 +23,31 @@ public class MainActivity extends AppCompatActivity {
     ImageView foto, foto2,fondo;
 
 
-    //Trabajador Trabajador;
+    Trabajador Trabajador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //nombre=findViewById(R.id.nombre);
-        //foto=findViewById(R.id.foto);
-        //foto2=findViewById(R.id.foto2);
-        //fondo=findViewById(R.id.fondo);
+        nombre=findViewById(R.id.nombre);
+        foto=findViewById(R.id.foto);
+        foto2=findViewById(R.id.foto2);
+        fondo=findViewById(R.id.fondo);
 
-        //Trabajador = (Trabajador)getIntent().getSerializableExtra("Trabajador");
+        Trabajador = (Trabajador)getIntent().getSerializableExtra("Trabajador");
 
-        //nombre.setText(Trabajador.getNombre());
-        //foto.setImageResource(Trabajador.getFoto());
-        //fondo.setImageResource(Trabajador.getFondo());
-        //foto2.setImageResource(Trabajador.getFoto2());
+        nombre.setText(Trabajador.getNombre());
+
+        Picasso.with(MainActivity.this)
+                .load(Trabajador.getFoto())
+                .into(foto);
+        Picasso.with(MainActivity.this)
+                .load(Trabajador.getFoto2())
+                .into(foto2);
+        Picasso.with(MainActivity.this)
+                .load(Trabajador.getFondo())
+                .into(fondo);
 
     }
 

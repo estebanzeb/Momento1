@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
- /*public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHolder> {
+ public class AdaptadorLista extends RecyclerView.Adapter<AdaptadorLista.viewHolder> {
 
    ArrayList<Trabajador> listaDeDatos;
 
@@ -54,10 +54,18 @@ import java.util.ArrayList;
             foto2 = itemView.findViewById(R.id.foto2);
         }
         public void actualizarDatosDeItem(Trabajador Trabajador) {
+
             nombre.setText(Trabajador.getNombre());
-            foto.setImageResource(Trabajador.getFoto());
-            fondo.setImageResource(Trabajador.getFondo());
-            foto2.setImageResource(Trabajador.getFoto2());
+
+            Picasso.with(itemView.getContext())
+                    .load(Trabajador.getFoto())
+                    .into(foto);
+            Picasso.with(itemView.getContext())
+                    .load(Trabajador.getFoto())
+                    .into(foto2);
+            Picasso.with(itemView.getContext())
+                    .load(Trabajador.getFoto())
+                    .into(fondo);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -70,21 +78,6 @@ import java.util.ArrayList;
                 }
             });
         }
-        public void actualizarDatosDeItem(Trabajador turismo) {
-
-            nombre.setText(turismo.getNombre());
-            Picasso.with(itemView.getContext())
-                    .load(turismo.getFoto())
-                    .into(foto);
-            Picasso.with(itemView.getContext())
-                    .load(turismo.getFoto())
-                    .into(foto2);
-            Picasso.with(itemView.getContext())
-                    .load(turismo.getFoto())
-                    .into(fondo);
-
-
-        }
     }
-}*/
+}
 
