@@ -5,21 +5,21 @@ import java.io.Serializable;
 
 public class Trabajador implements Serializable {
 
-    String nombre, foto,foto2,fondo;
+    String fondo, foto,foto2, nombre;
 
-    public Trabajador(String nombre, String foto, String foto2, String fondo) {
-        this.nombre = nombre;
+    public Trabajador(String fondo, String foto, String foto2, String nombre) {
+        this.fondo = fondo;
         this.foto = foto;
         this.foto2 = foto2;
-        this.fondo = fondo;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getFondo() {
+        return fondo;
+    }
+
+    public void setFondo(String fondo) {
+        this.fondo = fondo;
     }
 
     public String getFoto() {
@@ -38,12 +38,11 @@ public class Trabajador implements Serializable {
         this.foto2 = foto2;
     }
 
-    public String getFondo() {
-        return fondo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setFondo(String fondo) {
-        this.fondo = fondo;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-
 }

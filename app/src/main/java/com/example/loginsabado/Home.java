@@ -53,23 +53,23 @@ import java.util.Locale;
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                String nombre = document.get("nombre").toString();
+                                String fondo = document.get("fondo").toString();
                                 String foto = document.get("foto").toString();
                                 String foto2 = document.get("foto2").toString();
-                                String fondo = document.get("fondo").toString();
-                                listaDeDatos.add(new Trabajador(nombre, foto, foto2, fondo));
+                                String nombre = document.get("nombre").toString();
+                                listaDeDatos.add(new Trabajador(fondo, foto, foto2, nombre));
                             }
 
                             AdaptadorLista adaptador = new AdaptadorLista(listaDeDatos);
                             listado.setAdapter(adaptador);
 
                         } else {
+
                             Toast.makeText(getApplicationContext(), "No se encotraron las imagenes", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
     }
-
     //Metodo para configurar el idioma de mi telefono
     public void  cambiarIdioma(String lenguaje){
 

@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     //ATRIBUTOS
     TextView nombre;
     ImageView foto, foto2,fondo;
-    Trabajador Trabajador;
+
+    Trabajador Datos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +34,18 @@ public class MainActivity extends AppCompatActivity {
         foto2=findViewById(R.id.foto2);
         fondo=findViewById(R.id.fondo);
 
-        Trabajador = (Trabajador)getIntent().getSerializableExtra("Trabajador");
-
-        nombre.setText(Trabajador.getNombre());
+        Datos = (Trabajador)getIntent().getSerializableExtra("Trabajador");
 
         Picasso.with(MainActivity.this)
-                .load(Trabajador.getFoto())
+                .load(Datos.getFondo())
+                .into(fondo);
+        Picasso.with(MainActivity.this)
+                .load(Datos.getFoto())
                 .into(foto);
         Picasso.with(MainActivity.this)
-                .load(Trabajador.getFoto2())
+                .load(Datos.getFoto2())
                 .into(foto2);
-        Picasso.with(MainActivity.this)
-                .load(Trabajador.getFondo())
-                .into(fondo);
+        nombre.setText(Datos.getNombre());
 
     }
 

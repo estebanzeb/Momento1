@@ -48,25 +48,24 @@ import java.util.ArrayList;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            nombre = itemView.findViewById(R.id.nombre);
+            fondo = itemView.findViewById(R.id.fondo);
             foto = itemView.findViewById(R.id.foto);
             foto2 = itemView.findViewById(R.id.foto2);
-            fondo = itemView.findViewById(R.id.fondo);
+            nombre = itemView.findViewById(R.id.nombre);
 
         }
         public void actualizarDatosDeItem(Trabajador Datos) {
 
-            nombre.setText(Datos.getNombre());
-
+            Picasso.with(itemView.getContext())
+                    .load(Datos.getFondo())
+                    .into(fondo);
             Picasso.with(itemView.getContext())
                     .load(Datos.getFoto())
                     .into(foto);
             Picasso.with(itemView.getContext())
-                    .load(Datos.getFoto())
+                    .load(Datos.getFoto2())
                     .into(foto2);
-            Picasso.with(itemView.getContext())
-                    .load(Datos.getFoto())
-                    .into(fondo);
+            nombre.setText(Datos.getNombre());
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
