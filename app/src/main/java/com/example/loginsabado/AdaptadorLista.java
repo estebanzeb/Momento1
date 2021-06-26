@@ -50,21 +50,22 @@ import java.util.ArrayList;
             super(itemView);
             nombre = itemView.findViewById(R.id.nombre);
             foto = itemView.findViewById(R.id.foto);
-            fondo = itemView.findViewById(R.id.fondo);
             foto2 = itemView.findViewById(R.id.foto2);
-        }
-        public void actualizarDatosDeItem(Trabajador Trabajador) {
+            fondo = itemView.findViewById(R.id.fondo);
 
-            nombre.setText(Trabajador.getNombre());
+        }
+        public void actualizarDatosDeItem(Trabajador Datos) {
+
+            nombre.setText(Datos.getNombre());
 
             Picasso.with(itemView.getContext())
-                    .load(Trabajador.getFoto())
+                    .load(Datos.getFoto())
                     .into(foto);
             Picasso.with(itemView.getContext())
-                    .load(Trabajador.getFoto())
+                    .load(Datos.getFoto())
                     .into(foto2);
             Picasso.with(itemView.getContext())
-                    .load(Trabajador.getFoto())
+                    .load(Datos.getFoto())
                     .into(fondo);
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +73,7 @@ import java.util.ArrayList;
                 public void onClick(View v) {
 
                     Intent intent=new Intent(itemView.getContext(),MainActivity.class);
-                    intent.putExtra("Trabajador",Trabajador);
+                    intent.putExtra("Trabajador",Datos);
                     itemView.getContext().startActivity(intent);
 
                 }

@@ -23,7 +23,7 @@ import java.util.Locale;
 
  public class Home extends AppCompatActivity {
 
-   ArrayList<Trabajador> listaDeDatos = new ArrayList<>();
+    ArrayList<Trabajador> listaDeDatos = new ArrayList<>();
     RecyclerView listado;
     FirebaseFirestore baseDatos = FirebaseFirestore.getInstance();
 
@@ -36,6 +36,7 @@ import java.util.Locale;
         listado.setHasFixedSize(true);
         listado.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
+        //Metodo que se crea para cargar los datos
         crearListado();
 
     }

@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
     //ATRIBUTOS
     TextView nombre;
     ImageView foto, foto2,fondo;
-
-
     Trabajador Trabajador;
 
     @Override
@@ -50,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 .into(fondo);
 
     }
-
 
     //Metodo para configurar el idioma de mi telefono
     public void  cambiarIdioma(String lenguaje){
